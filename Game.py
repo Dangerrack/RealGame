@@ -90,7 +90,7 @@ while not game_over:
             enemypos2[1] += 5
 
 
-    screen.blit(Playersprite,(200,200))
+    screen.blit(Playersprite,(playerpos[0],playerpos[1]))
     pygame.draw.rect(screen, Red, ((enemypos[0]), enemypos[1],enemysize, enemysize))
     pygame.draw.rect(screen, Red, ((enemypos2[0]), enemypos2[1], enemysize2, enemysize2))
     player = pygame.Rect(playerpos[0],playerpos[1], playersize, playersize)
