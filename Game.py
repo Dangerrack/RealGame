@@ -51,6 +51,9 @@ while not game_over:
 
     for event in pygame.event.get():
 
+
+
+
         if event.type == pygame.QUIT:
             sys.exit()
 
@@ -70,7 +73,7 @@ while not game_over:
             elif event.key == pygame.K_d:
                 x += 20
             playerpos = [x,y]
-        screen.fill((0,0,0))
+        screen.fill((225,225,225))
         if  enemypos[1] >= 0 and enemypos[1] < height:
            enemypos[1] += 5
         else:
