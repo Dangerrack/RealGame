@@ -41,9 +41,9 @@ timer_event = pygame.USEREVENT + 1
 pygame.time.set_timer(timer_event,25)
 
 
-Playersprite = pygame.image.load("New Piskel.png").convert_alpha()
-
-
+Playersprite = pygame.image.load("spaceship.png").convert_alpha()
+enemysprite = pygame.image.load("Meteor.png").convert_alpha()
+backround = pygame.image.load("backround.png").convert_alpha()
 
 game_over= False
 
@@ -76,7 +76,7 @@ while not game_over:
         screen.fill((225,225,225))
         if  enemypos[1] >= 0 and enemypos[1] < height:
            enemypos[1] += 5
-        else:
+        else:aa
             enemypos[1] = 0
             enemypos[0] = randint(1,width)
         if event.type == timer_event:
@@ -89,10 +89,11 @@ while not game_over:
         if event.type == timer_event:
             enemypos2[1] += 5
 
-
+    screen.blit(backround, (0, 0))
     screen.blit(Playersprite,(playerpos[0],playerpos[1]))
-    pygame.draw.rect(screen, Red, ((enemypos[0]), enemypos[1],enemysize, enemysize))
-    pygame.draw.rect(screen, Red, ((enemypos2[0]), enemypos2[1], enemysize2, enemysize2))
+    screen.blit(enemysprite,(enemypos[0],enemypos[1]))
+    screen.blit(enemysprite, (enemypos2[0], enemypos2[1]))
+
     player = pygame.Rect(playerpos[0],playerpos[1], playersize, playersize)
     enemy = pygame.Rect(enemypos[0],enemypos[1], enemysize, enemysize)
     enemy2 = pygame.Rect(enemypos2[0],enemypos2[1], enemysize, enemysize)
