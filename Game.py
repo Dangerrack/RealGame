@@ -45,6 +45,7 @@ Playersprite = pygame.image.load("spaceship.png").convert_alpha()
 enemysprite = pygame.image.load("Meteor.png").convert_alpha()
 backround = pygame.image.load("backround.png").convert_alpha()
 
+
 game_over= False
 
 while not game_over:
