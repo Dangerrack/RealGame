@@ -41,7 +41,7 @@ timer_event = pygame.USEREVENT + 1
 pygame.time.set_timer(timer_event,25)
 
 
-Playersprite = pygame.image.load("New Piskel.png").convert_alpha()
+Playersprite = pygame.image.load("Test2.png").convert_alpha()
 
 
 
