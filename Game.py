@@ -15,12 +15,12 @@ width = 600
 screen = pygame.display.set_mode((width, height))
 
 Blue = (0,0,225)
-white = (255,255,255)
+White = (255,255,255)
 Red = (225, 0, 0)
 
 Green = (0,225,0)
 
-screen.fill(white)
+screen.fill(White)
 pygame.display.update()
 
 playerpos = [200,300]
